@@ -1,2 +1,0 @@
--- Use this command to copy "nice" names from ourairport.com to ADDS station airports.
-UPDATE airports set airport_nicename = (SELECT airports_open.name from airports_open where airports_open.gps_code = airports.airport_icao);

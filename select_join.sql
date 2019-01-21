@@ -1,2 +1,0 @@
--- Use this command to copy IATA three-letter airport codes to ADDS/ICAO airports.
-UPDATE airports set airport_iata = (SELECT airports_open.iata_code from airports_open where airports_open.gps_code = airports.airport_icao);
