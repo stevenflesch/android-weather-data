@@ -246,11 +246,10 @@ CLEANUP SECTION
 ****************************************/
 
 // Clean up runways.
-$str_trim_runways = "\n\nDELETE FROM runways WHERE runways.airport_icao NOT IN (SELECT airports.airport_icao FROM airports);\n\n";
+$str_trim_runways = "\n\nDELETE FROM runways WHERE runways.runway_icao NOT IN (SELECT airports.airport_icao FROM airports);\n\n";
 if($debug) echo $str_trim_runways;
 file_put_contents($sqlfile, $str_trim_runways, FILE_APPEND | LOCK_EX);
 
 // Vacuum/Compact database.
 file_put_contents($sqlfile, "\n\nVACUUM;", FILE_APPEND | LOCK_EX);
-
 ?>
