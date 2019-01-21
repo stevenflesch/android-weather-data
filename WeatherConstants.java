@@ -18,10 +18,10 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 For more information, please email arimus@users.sourceforge.net
 */
-package com.iawix.windsock;
 
 /**
  * Simple container for METAR weather token constants.
+ * Some additions by Steven Flesch (https://github.com/stevenflesch/android-weather-data)
  *
  * @author dennis@bullamanka.com
  */
@@ -35,6 +35,8 @@ public interface WeatherConstants {
     public static final String METAR_CORRECTED = "COR";
     /** Metar value for SM in feet. */
     public static final int METAR_FEET_PER_STATUTE_MILE = 5280;
+    /** Metar value for feet to meters **/
+    public static final double METAR_METERS_PER_FOOT = 0.3048;
 
     /**
      * Cloud cover/vertical visibility.
@@ -146,6 +148,8 @@ public interface WeatherConstants {
     public static final String METAR_FROM = "FM";
     /** Metar string value for 30% Probability ('PROB30') */
     public static final String METAR_CHANCE = "PROB30";
+    /** Metar string value for 40% Probability ('PROB40') */
+    public static final String METAR_CHANCE40 = "PROB40";
     /** Metar string value for Remarks ('RMK') */
     public static final String METAR_REMARKS = "RMK";
     /** Metar string value for RVR reportable */
