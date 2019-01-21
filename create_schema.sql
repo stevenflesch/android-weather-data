@@ -5,10 +5,19 @@ CREATE TABLE "runways" (
 	`runway_width`	TEXT,
 	`runway_surface`	TEXT,
 	`runway_lighted`	INTEGER,
+	`runway_closed`		INTEGER,
 	`runway_le_ident`	TEXT,
 	`runway_le_heading_degT`	REAL,
+	`runway_le_lat`	REAL,
+	`runway_le_lon`	REAL,
+	`runway_le_elevation`	REAL,
+	`runway_le_displaced_threshold`	REAL,
 	`runway_he_ident`	TEXT,
-	`runway_he_heading_degT`	REAL
+	`runway_he_heading_degT`	REAL,
+	`runway_he_lat`	REAL,
+	`runway_he_lon`	REAL,
+	`runway_he_elevation`	REAL,
+	`runway_he_displaced_threshold`	REAL
 );
 CREATE TABLE "countries" (
 	`_id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
