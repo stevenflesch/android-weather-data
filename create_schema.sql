@@ -1,4 +1,3 @@
-BEGIN TRANSACTION;
 CREATE TABLE "runways" (
 	`_id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`runway_icao`	TEXT,
@@ -32,4 +31,4 @@ CREATE TABLE "airports" (
 	`airport_taf`	INTEGER DEFAULT 0,
 	`airport_nexrad`	INTEGER DEFAULT 0
 );
-COMMIT;
+
